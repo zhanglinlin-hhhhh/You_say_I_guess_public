@@ -122,37 +122,6 @@ if state_record[0]["gaming"] == True: # 游戏状态
     show_chat(out)
 
     if shenfen == "描述者":
-        # # 语音输入
-        # voice_flag = False
-        # # 调节输入音频的时长
-        # input_vocie_time = st.sidebar.slider("input vocie time",0,20,5)
-        # if st.sidebar.button("语音输入"):
-        #     voice_flag = True
-        #     gp.get_pcm(plat.get_pcm,"streamlit",input_vocie_time)
-        #     with st.spinner('recognizing'):
-        #         prompt = vt.get_text_from_voice(plat.get_pcm)
-            
-        # if voice_flag: #语音输入后的结果
-        #     cai_show_record(prompt,"user")
-        #     #检测，提示词是否违规
-        #     if game_cai.jiance_prompt(prompt):
-        #         cai_show_record("描述违规本轮此作废","S")
-        #     else:
-        #         answer, lunshu = zp.get_zhipu_text(plat.data_api,prompt,game_cai.game_send,"glm-4")
-        #         cai_show_record(answer,"assistant")
-        #         num = int(2-lunshu)
-                
-        #         #检测结果是否被猜出
-        #         if game_cai.jiance_result(answer):
-        #             st.chat_message("S").write("成功了。点击左侧“开始游戏”进行下一轮")
-        #         else:
-        #             if num == 0:
-        #                 st.chat_message("S").write("很遗憾AI没有猜出来。点击左侧“开始游戏”进行下一轮")
-        #                 state_record[0]["gaming"] = False
-        #             else:
-        #                 system_prompt = f"剩余轮数{num}"
-        #                 cai_show_record(system_prompt,"S")
-        #     voice_flag = False
         # 文字输入
         if  prompt := st.chat_input():
             cai_show_record(prompt,"user")
