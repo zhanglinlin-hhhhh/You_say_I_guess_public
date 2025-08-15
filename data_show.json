@@ -1,0 +1,19 @@
+{
+    "header": {
+        "app_id": "f0****74",
+        "uid": "15*******9f0f"
+    },
+    "parameter": {
+        "chat": {
+            "domain": "generalv3.5",
+            "temperature": 0.5,
+            "max_tokens": 1024,
+            "top_k": 4}
+    },
+    "payload": {
+        "message": {
+            "text": [
+                {"role": "user", "content": "Introduce yourself."}
+                ] }
+    }
+}

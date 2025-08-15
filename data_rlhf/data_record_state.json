@@ -1,0 +1,17 @@
+[
+    {
+        "list": [
+            "F:\\plat\\data_rlhf\\data_rlhf_show_cleared.jsonl"
+        ],
+        "now_file": "F:\\plat\\data_rlhf\\data_rlhf_show_cleared.jsonl",
+        "data_rlhf_show_clearedjsonlRLHF_state.jsonl": {
+            "prompt": "将“三年不翅，将以长羽翼”翻译成现代文",
+            "response": [
+                "长时间默默无闻，是为了在适当的时机展翅高飞。",
+                "三年不展翅膀，就要长出羽翼。",
+                "雄鹰飞翔三年不振翅，是为了让羽翼更加丰满。",
+                "三年不飞翔，是为了将来能够长出更强大的翅膀。"
+            ]
+        }
+    }
+]

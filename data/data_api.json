@@ -1,0 +1,29 @@
+[
+    {
+       "SparkApi":{
+                "appid" : "f006a074",     
+                "api_secret" : "MWFmNGIyMWJiMDQ2MzgzN2FhMGY2NzNk",  
+                "api_key" : "156d41c0ca3f85710e4e000036c89f0f"    
+                },
+
+        "alibabaApi":{
+                "api_key":"sk-7db23c98394d4f5db7bae8754ddfec01"
+                    },
+
+        "zhipuApi":{
+            "api_key":"8ada6554cc726be47dd64db0ef99153c.kY1a5gLRY7H5FH9O"
+                    },
+
+        "MoonshotApi":{
+            "api_key":"sk-dTNOn0mOEjyRSTPHDZUKStKKrKgkHc8YGf9tTn6jXmuE2O5j",
+            "base_url":"https://api.moonshot.cn/v1"
+                    },
+
+        "BaiduQFApi":{
+            "API_KEY":"",
+            "SECRET_KEY":"",
+            "url":""
+                    }
+
+    }
+]

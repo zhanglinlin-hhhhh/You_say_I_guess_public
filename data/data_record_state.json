@@ -1,0 +1,9 @@
+[
+    {
+        "picture_input": false,
+        "game_state": false,
+        "gaming": false,
+        "rlhf": false,
+        "flaging": false
+    }
+]
