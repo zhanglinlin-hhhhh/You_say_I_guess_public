@@ -8,6 +8,28 @@ import json
 
 st.title("Human LLM You Say I Guess 😊")
 
+import streamlit as st
+import base64
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+img_path = 'd:\\Users\\Administrator\\Desktop\\demo演示背景\\demo背景12.png'
+img_base64 = get_base64_of_bin_file(img_path)
+
+page_bg_img = f"""
+<style>
+.stApp {{
+background-image: url("data:image/jpg;base64,{img_base64}");
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}}
+</style>
+"""
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 class platform():
     def __init__(self,data_path_plat ,data_game_path):
