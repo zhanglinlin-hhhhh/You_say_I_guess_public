@@ -34,17 +34,17 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 class platform():
     def __init__(self,data_path_plat ,data_game_path):
-        '''
-        data_path_plat 储存平台文件的文件夹，不带文件名称
-        data_game_path 谁是卧底游戏的文件路径
-        '''
-        self.chat_his = data_path_plat + "/data_his.json"
-        self.get_pcm = data_path_plat + "/get.pcm"
-        self.demo_pcm = data_path_plat + "/demo.pcm"
+        import os
+        os.makedirs(data_path_plat, exist_ok=True)   # 自动创建文件夹
+
+        self.chat_his = os.path.join(data_path_plat, "data_his.json")
+        self.get_pcm = os.path.join(data_path_plat, "get.pcm")
+        self.demo_pcm = os.path.join(data_path_plat, "demo.pcm")
         self.out_his = data_path_plat
         self.data_game = data_game_path
-        self.data_chat_state = data_path_plat + "/data_record_state.json"
-        self.data_api = data_path_plat + "/data_api.json" #用来获取模型调用的api参数
+        self.data_chat_state = os.path.join(data_path_plat, "data_record_state.json")
+        self.data_api = os.path.join(data_path_plat, "data_api.json")
+
 
     def read_chat_state(self) -> List: #读取聊天历史状态
         '''
@@ -100,8 +100,16 @@ def cai_show_record(prompt:str, role:str = Literal["S","user","assistant"] ):
     game_cai.record_streamlit(prompt,role)
 
 
-data_path_plat = r"F:\plat\data"
-data_game = r"F:\plat\data_who"
+import os
+
+# 确保 data 目录存在
+os.makedirs("data", exist_ok=True)
+os.makedirs("data_who", exist_ok=True)
+os.makedirs("data_cai", exist_ok=True)
+
+data_path_plat = "data"         # 平台数据存放目录
+data_game = "data_who"          # 谁是卧底游戏数据目录
+
 
 # class 类的定义与使用
 plat = platform(data_path_plat ,data_game)
