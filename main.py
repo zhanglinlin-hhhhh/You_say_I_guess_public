@@ -9,6 +9,7 @@ import json
 st.title("Human LLM You Say I Guess 😊")
 
 import streamlit as st
+import os
 import base64
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
