@@ -15,7 +15,7 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-img_path = 'd:\\Users\\Administrator\\Desktop\\demo演示背景\\demo背景12.png'
+img_path = os.path.join("pic", "demo背景12.png")
 img_base64 = get_base64_of_bin_file(img_path)
 
 page_bg_img = f"""
